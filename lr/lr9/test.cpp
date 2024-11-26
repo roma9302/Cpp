@@ -30,7 +30,7 @@ int main() {
         cout << endl;
     }
     
-    a
+    
     for (int j = 0; j < m; j++) {
         bool zero = false; 
         
