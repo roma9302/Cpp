@@ -30,9 +30,9 @@ int main(){
         cin >> stud[i].year;
         cout << "Введите №группы студента " <<i+1 << endl;
         cin >> stud[i].group;
-        cout << "Введите оценку по физике"<<i+1 << endl;
+        cout << "Введите оценку по физике "<<i+1 << endl;
         cin >> stud[i].fizika[0];
-        cout << "Введите оценку по математике"<<i+1 << endl;
+        cout << "Введите оценку по математике "<<i+1 << endl;
         cin >> stud[i].matem[0];
         cout << "Введите оценку по химии " <<i+1 << endl;
         cin >> stud[i].ximia[0];
