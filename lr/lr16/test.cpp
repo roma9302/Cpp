@@ -21,7 +21,7 @@ struct person
 
 int main(){
     int gr;
-    int average_group=0;
+    float average_group=0;
     person stud[3];
     for(int i{}; i<3;i++){
         cout << "Введите фио студента" << i +1 <<  endl;
