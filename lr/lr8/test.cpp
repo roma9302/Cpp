@@ -273,17 +273,17 @@ int main() {
     }
 
     
-    int bInd = 0; 
+    int id = 0; 
     for (int i = 0; i < SIZE; i++) {
         if (A[i] < 10) {
-            B[bInd] = A[i];
-            bInd++; 
+            B[id] = A[i];
+            id++; 
         }
     }
 
     
-    for(int i = 0; i < bInd-1; i++) {
-        for(int n = 0; n < bInd-1-i; n++) { 
+    for(int i = 0; i < id-1; i++) {
+        for(int n = 0; n < id-1-i; n++) { 
             if(B[n] > B[n+1]) { 
                 int temp = B[n];
                 B[n] = B[n+1];
@@ -301,7 +301,7 @@ int main() {
     
     
     cout << "Array B: ";
-    for (int i = 0; i < bInd; i++) { 
+    for (int i = 0; i < id; i++) { 
         cout << B[i] << " ";
     }
     cout << endl;
