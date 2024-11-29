@@ -52,47 +52,53 @@ int main(){
 #include <ctime>
 #include <cstdlib>
 
-
 using namespace std;
 
+int main() {
+    int* c;
+    int* b;
+    int r, counter = 0;
 
-int main(){
-  int* c;
-  int* b;
-  int r,q , counter=0;
-  cout << "input number massiv len: " << endl;
-  cin >> r;
+    cout << "Input len " << endl;
+    cin >> r;
 
-  c = new int[r];
+    c = new int[r];
 
-  
-  srand(time(0));
-  for(int i{}; i<r;i++){
-      c[i] = rand() %  100;
-      cout << c[i] << " " << endl;
-      
-  }
-  
-   for(int i{}; i<r;i++){
-      if(c[i]>3){
-          counter++;
-      }
-      
-    b = new int[counter];
-    
-    for(int i {}; i<counter;i++){
-        if(c[i]>3){
-            b[i] = c[i];
-        }    
+    srand(time(0));
+    for (int i = 0; i < r; i++) {
+        c[i] = rand() % 10; 
+        cout << c[i] << " ";
     }
-  }
-    for(int i = 1 ; i<counter;i++){
+    cout << endl;
+
+
+    for (int i = 0; i < r; i++) {
+        if (c[i] > 3) {
+            counter++;
+        }
+    }
+
+
+    b = new int[counter];
+
+
+    int id = 0; 
+    for (int i = 0; i < r; i++) {
+        if (c[i] > 3) {
+            b[id] = c[i];
+            id++;
+        }
+    }
+
+
+    for (int i = 0; i < counter; i++) {
         cout << b[i] << " ";
-        
-    }  
-  
-  delete[] c;
-  delete[] b;
-    
-  return 0;
+    }
+    cout << endl;
+
+
+    delete[] c;
+    delete[] b;
+
+    return 0;
 }
