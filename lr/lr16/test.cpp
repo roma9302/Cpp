@@ -25,9 +25,9 @@ int main(){
     float average_group=0;
     person stud[3];
     for(int i{}; i<3;i++){
-        cout << "Введите фио студента" << i +1 <<  endl;
+        cout << "Введите фио студента " << i +1 <<  endl;
         cin >> stud[i].fio;
-        cout << "Введите год рождения" <<i+1 << endl;
+        cout << "Введите год рождения " <<i+1 << endl;
         cin >> stud[i].year;
         cout << "Введите №группы студента " <<i+1 << endl;
         cin >> stud[i].group;
