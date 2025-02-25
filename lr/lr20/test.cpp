@@ -83,7 +83,8 @@ public:
 
 int main() {
 	setlocale(LC_ALL, "RU");
-	int min_interval, max_interval;
+	long long int min_interval;
+        long long int max_interval;
 	Customer customers[4] = {
 		Customer("Рома", "стим", "олегович", "воронянского 78 дом 3", 634834834, 4543567845332345, 1),
 		Customer("гоша", "гостинг", "либронович", "Пушкинская 844 дом 1",5635876359873 , 6745234567892311, 2),
