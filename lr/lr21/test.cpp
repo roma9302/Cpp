@@ -36,3 +36,33 @@ int main() {
 
 
 //number 2
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+template<typename T>
+T sum_lower_diag(const T arr[3][3]) {
+    T sum = 0;
+
+    
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (i > j) {
+                sum += abs(arr[i][j]);
+            }
+        }
+    }
+
+    return sum;
+}
+
+int main() {
+    int numbers[3][3] = {{4, 6, 7}, {-7, 23, -6}, {-4, -2, -1}};
+    double numbers1[3][3] = {{4.4, 6.2, 7.6}, {-7.3, 23.6, -6.6}, {-4.1, -2.3, -1.4}};
+
+    cout  << "Сумма модулей  ниже диагонали: " << sum_lower_diag(numbers) << endl;
+    cout  << "Сумма модулей  ниже диагонали: " << sum_lower_diag(numbers1) << endl;
+
+    return 0;
+}
