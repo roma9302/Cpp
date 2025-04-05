@@ -150,7 +150,7 @@ struct list {
         }
 
         delete[] array;
-	}
+     }
     
     
     void sorted_insert(){
