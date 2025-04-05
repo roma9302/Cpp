@@ -129,16 +129,16 @@ struct list {
         
         for (int start = 0; start < count - 1; ++start)
 	    {
-		    int small = start;
-            
+		int small = start;
+		    
 		    for (int current = start + 1; current < count; ++current)
 		    {
 			    if (array[current] < array[small])
-                {
-				    small = current;
-                }    
+                            {
+				small = current;
+                            }    
 		    }
-		    std::swap(array[start], array[small]);
+		std::swap(array[start], array[small]);
         }
         
         p = first;
@@ -179,7 +179,7 @@ struct list {
         {     
 	        for(int j=i; j>0 && array[j-1]>array[j]; j--)
             {
-		        swap(array[j-1],array[j]);        
+	         swap(array[j-1],array[j]);        
             }
         }
         
