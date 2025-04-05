@@ -81,7 +81,8 @@ struct list {
         }
 
         
-        for (int i = 0; i < count - 1; i++) {
+        for (int i = 0; i < count - 1; i++) 
+	{
             for (int j = 0; j < count - i - 1; j++) 
             {
                 if (array[j] > array[j + 1]) 
@@ -128,7 +129,7 @@ struct list {
         }
         
         for (int start = 0; start < count - 1; ++start)
-	    {
+	{
 		int small = start;
 		    
 		    for (int current = start + 1; current < count; ++current)
@@ -178,9 +179,9 @@ struct list {
         for(int i=1; i<count; i++)
         {     
 	        for(int j=i; j>0 && array[j-1]>array[j]; j--)
-            {
-	         swap(array[j-1],array[j]);        
-            }
+                {
+	             swap(array[j-1],array[j]);        
+                 }
         }
         
         p = first;
