@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-
 using namespace std;
 
 struct Node {
@@ -17,22 +16,26 @@ struct list {
 
     list() : first(nullptr), last(nullptr) {}
 
-    bool is_empty() {
+    bool is_empty() 
+    {
         return first == nullptr;
     }
     
     ~list()
     {
-        while (first) {
+        while (first) 
+        {
             Node* temp = first;
             first = first->next;
             delete temp; 
         }
     }
 
-    void push_back(int val) {
+    void push_back(int val) 
+    {
         Node* p = new Node(val);
-        if (is_empty()) {
+        if (is_empty()) 
+        {
             first = p;
             last = p;
             return;
@@ -44,7 +47,8 @@ struct list {
     void print() {
         if (is_empty()) return;
         Node* p = first;
-        while (p) {
+        while (p) 
+        {
             cout << p->val << " ";
             p = p->next;
         }
@@ -52,14 +56,16 @@ struct list {
     }
     
     
-    void sorted_bubble() {
+    void sorted_bubble() 
+    {
         if (is_empty()) return;
 
 
         int count = 0;
         Node* p = first;
         
-        while (p) {
+        while (p) 
+        {
             count++;
             p = p->next;
         }
@@ -68,15 +74,18 @@ struct list {
         p = first;
 
         
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++) 
+        {
             array[i] = p->val;
             p = p->next;
         }
 
         
         for (int i = 0; i < count - 1; i++) {
-            for (int j = 0; j < count - i - 1; j++) {
-                if (array[j] > array[j + 1]) {
+            for (int j = 0; j < count - i - 1; j++) 
+            {
+                if (array[j] > array[j + 1]) 
+                {
                     std::swap(array[j], array[j + 1]);
                 }
             }
@@ -84,7 +93,8 @@ struct list {
 
         
         p = first;
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++) 
+        {
             p->val = array[i];
             p = p->next;
         }
@@ -111,14 +121,15 @@ struct list {
         p = first;
 
         
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++) 
+        {
             array[i] = p->val;
             p = p->next;
         }
         
         for (int start = 0; start < count - 1; ++start)
-	      {
-		        int small = start;
+	    {
+		    int small = start;
             
 		    for (int current = start + 1; current < count; ++current)
 		    {
@@ -131,7 +142,8 @@ struct list {
         }
         
         p = first;
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++) 
+        {
             p->val = array[i];
             p = p->next;
         }
@@ -156,7 +168,8 @@ struct list {
         p = first;
 
         
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++) 
+        {
             array[i] = p->val;
             p = p->next;
         }
@@ -171,15 +184,14 @@ struct list {
         }
         
         p = first;
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++) 
+        {
             p->val = array[i];
             p = p->next;
         }
 
         delete[] array;
     }    
- 
-    
     
 };
 
